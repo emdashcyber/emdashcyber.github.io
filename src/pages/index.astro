@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { getPagesProjects } from '../lib/projects.mjs';
+
+const title = 'EmDash Cyber';
+const description = 'Research projects and tools from EmDash Cyber.';
+const projects = await getPagesProjects();
+---
+
+<Base title={title} description={description}>
+  <section class="hero" aria-labelledby="site-title">
+    <h1 id="site-title" class="home-title">
+      <img src="/emdash-mark.svg" alt="" width="64" height="64" />
+      <span>EmDash Cyber</span>
+    </h1>
+  </section>
+
+  <section class="research" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research</h2>
+    <ul class="posts">
+      {projects.map((project) => (
+        <li>
+          <article class="post">
+            <h3 class="post-title"><a href={project.pageUrl}>{project.title}</a></h3>
+            <p class="post-desc">{project.description}</p>
+          </article>
+        </li>
+      ))}
+      {projects.length === 0 && <li class="empty-list">No published GitHub Pages sites were found.</li>}
+    </ul>
+  </section>
+</Base>
