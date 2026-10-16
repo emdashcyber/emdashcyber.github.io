@@ -5,6 +5,12 @@ const apiUrl = `https://api.github.com/orgs/${organization}/repos?type=public&pe
 // Keep the offline list in the same newest-repository-first order as API discovery.
 export const fallbackProjects = [
   {
+    name: 'e4eit-assurance',
+    title: 'Assess your enterprise IT against the ASD Essentials',
+    description: 'A private, in-browser tool to scope, assess and report on ASD Essentials for enterprise IT.',
+    pageUrl: 'https://emdashcyber.com/e4eit-assurance/',
+  },
+  {
     name: 'phishing-detection-decision-models',
     title: 'I tested 5 AI decision models on 1,000 emails for phishing detection',
     description: 'A comparison of decision models on phishing and legitimate email detection.',

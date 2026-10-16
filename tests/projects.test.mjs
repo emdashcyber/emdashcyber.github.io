@@ -42,11 +42,13 @@ test('uses the saved site list when GitHub discovery fails', async () => {
   assert.deepEqual(projects, fallbackProjects);
   assert.notEqual(projects, fallbackProjects);
   assert.deepEqual(projects.map(({ name }) => name), [
+    'e4eit-assurance',
     'phishing-detection-decision-models',
     'dmarc-au',
     'ransomwatch',
   ]);
   assert.deepEqual(projects.map(({ title }) => title), [
+    'Assess your enterprise IT against the ASD Essentials',
     'I tested 5 AI decision models on 1,000 emails for phishing detection',
     'How are .au domains configured for email?',
     'Ransomware victim claims, tracked over time',
