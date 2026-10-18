@@ -63,8 +63,8 @@ test('robots.txt points at a sitemap index covering every project', () => {
   const locs = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   assert.deepEqual(locs, [
     `${SITE}/sitemap-home.xml`,
+    `${SITE}/phishnchips-decision-models/sitemap.xml`,
     `${SITE}/e4eit-assurance/sitemap.xml`,
-    `${SITE}/phishing-detection-decision-models/sitemap.xml`,
     `${SITE}/dmarc-au/sitemap.xml`,
     `${SITE}/ransomwatch/sitemap.xml`,
   ]);

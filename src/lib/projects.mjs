@@ -5,16 +5,16 @@ const apiUrl = `https://api.github.com/orgs/${organization}/repos?type=public&pe
 // Keep the offline list in the same newest-repository-first order as API discovery.
 export const fallbackProjects = [
   {
+    name: 'phishnchips-decision-models',
+    title: 'PhishNChips: 12 AI decision models compared on 3,011 emails',
+    description: 'A dashboard of accuracy, errors, speed and cost for 12 decision models on phishing detection.',
+    pageUrl: 'https://emdashcyber.com/phishnchips-decision-models/',
+  },
+  {
     name: 'e4eit-assurance',
     title: 'Assess your enterprise IT against the ASD Essentials',
     description: 'A private, in-browser tool to scope, assess and report on ASD Essentials for enterprise IT.',
     pageUrl: 'https://emdashcyber.com/e4eit-assurance/',
-  },
-  {
-    name: 'phishing-detection-decision-models',
-    title: 'I tested 5 AI decision models on 1,000 emails for phishing detection',
-    description: 'A comparison of decision models on phishing and legitimate email detection.',
-    pageUrl: 'https://emdashcyber.com/phishing-detection-decision-models/',
   },
   {
     name: 'dmarc-au',
