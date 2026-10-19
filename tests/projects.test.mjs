@@ -42,12 +42,14 @@ test('uses the saved site list when GitHub discovery fails', async () => {
   assert.deepEqual(projects, fallbackProjects);
   assert.notEqual(projects, fallbackProjects);
   assert.deepEqual(projects.map(({ name }) => name), [
+    'lockbit-leak',
     'phishnchips-decision-models',
     'e4eit-assurance',
     'dmarc-au',
     'ransomwatch',
   ]);
   assert.deepEqual(projects.map(({ title }) => title), [
+    'Inside the LockBit 4.0 affiliate panel',
     'PhishNChips: 12 AI decision models compared on 3,011 emails',
     'Assess your enterprise IT against the ASD Essentials',
     'How are .au domains configured for email?',

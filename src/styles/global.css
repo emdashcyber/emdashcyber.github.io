@@ -94,23 +94,24 @@ main:focus-visible { outline: none; box-shadow: inset 0 3px 0 var(--accent); }
 .theme-toggle[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
 .header-nav { display: flex; }
 
-.page { flex: 1; width: 100%; max-width: 78rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
-.hero { max-width: 900px; margin: 0 auto; padding: 4rem 0 3rem; text-align: center; }
+.page { flex: 1; width: 100%; max-width: 78rem; margin: 0 auto; padding: 0 1.25rem 1.5rem; }
+.hero { max-width: 900px; margin: 0 auto; padding: 2rem 0 1.5rem; text-align: center; }
 .eyebrow { margin: 0 0 1rem; color: var(--accent); font: 600 0.78rem/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; }
 .lede { color: var(--muted); font-size: 1.15rem; }
 h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
-.home-title { display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: clamp(2.25rem, 5vw, 3.5rem); }
-.home-title img { display: block; width: 4rem; height: 4rem; border-radius: 0.75rem; }
+.home-title { display: flex; align-items: center; justify-content: center; gap: 0.85rem; font-size: clamp(1.9rem, 4vw, 2.5rem); }
+.home-title img { display: block; width: 3rem; height: 3rem; border-radius: 0.6rem; }
 .research { max-width: 900px; margin: 0 auto; }
-.research h2 { margin: 0 0 1rem; font-size: clamp(1.5rem, 3vw, 1.9rem); }
-.posts { display: grid; gap: 0.75rem; max-width: 900px; margin: 0 auto; padding: 0; list-style: none; }
-.posts li { margin: 0; }
+.research h2 { margin: 0 0 0.75rem; font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 0.6rem; max-width: 900px; margin: 0 auto; padding: 0; list-style: none; }
+.posts li { margin: 0; display: flex; }
 .post {
   position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  gap: 0.45rem;
-  padding: 1.25rem 1.4rem;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
@@ -119,14 +120,14 @@ h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
 }
 .post:hover { border-color: var(--accent); transform: translateY(-2px); }
 .post:has(a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
-.post-title { font-size: 1.2rem; line-height: 1.3; font-weight: 700; }
+.post-title { font-size: 1.05rem; line-height: 1.3; font-weight: 700; }
 .post-title a { color: inherit; text-decoration: none; }
 .post-title a:focus-visible { outline: none; }
 .post-title a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
-.post-desc { color: var(--muted); }
+.post-desc { margin: 0; color: var(--muted); font-size: 0.875rem; line-height: 1.45; }
 .empty-list { padding: 1.25rem 1.4rem; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--muted); }
 
-.site-footer { margin-top: 5rem; border-top: 1px solid var(--border); }
+.site-footer { margin-top: 1.5rem; border-top: 1px solid var(--border); }
 .site-footer-inner {
   display: flex;
   align-items: center;
@@ -148,9 +149,9 @@ h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
   .header-link, .theme-toggle { min-height: 2.1rem; padding-inline: 0.65rem; font-size: 0.8rem; }
   .brand { gap: 0.45rem; font-size: 0.9rem; }
   .brand img { width: 1.45rem; height: 1.45rem; }
-  .hero { padding-top: 2.75rem; }
-  .home-title { gap: 0.7rem; font-size: clamp(1.9rem, 8vw, 2.7rem); }
-  .home-title img { width: 3rem; height: 3rem; border-radius: 0.6rem; }
+  .hero { padding-top: 1.5rem; }
+  .home-title { gap: 0.6rem; font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .home-title img { width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; }
   .site-footer-inner { align-items: flex-start; flex-direction: column; }
 }
 

@@ -5,6 +5,12 @@ const apiUrl = `https://api.github.com/orgs/${organization}/repos?type=public&pe
 // Keep the offline list in the same newest-repository-first order as API discovery.
 export const fallbackProjects = [
   {
+    name: 'lockbit-leak',
+    title: 'Inside the LockBit 4.0 affiliate panel',
+    description: 'Aggregate statistics from the leaked LockBit 4.0 panel database, with no credentials or victim identities.',
+    pageUrl: 'https://emdashcyber.com/lockbit-leak/',
+  },
+  {
     name: 'phishnchips-decision-models',
     title: 'PhishNChips: 12 AI decision models compared on 3,011 emails',
     description: 'A dashboard of accuracy, errors, speed and cost for 12 decision models on phishing detection.',
