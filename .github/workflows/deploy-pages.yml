@@ -31,22 +31,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
+          node-version-file: .node-version
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify project discovery
-        run: npm test
-
-      - name: Build Astro site
-        run: npm run build
+      - name: Test, build and verify
+        run: npm run check
         env:
           GITHUB_TOKEN: ${{ github.token }}
-
-      - name: Verify build output
-        run: npm run verify
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
